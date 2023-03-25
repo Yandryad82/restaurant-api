@@ -1,6 +1,7 @@
 const exprees = require('express');
+require('dotenv').config();
 
-const PORT = 8000;
+const PORT = process.env.PORT;
 
 const app = exprees();
 
