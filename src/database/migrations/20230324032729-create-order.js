@@ -11,11 +11,21 @@ module.exports = {
       },
       tableId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'tables',
+          key: 'id'
+        },
+        field: 'table_id'
       },
       userId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'users',
+          key: 'id'
+        },
+        field: 'user_id'
       },
       total: {
         type: Sequelize.FLOAT,
